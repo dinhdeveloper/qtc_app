@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/cartView"
+    app:cardCornerRadius="10dp">
+
+    <b.laixuantam.myaarlibrary.widgets.roundview.RoundRelativeLayout
+        android:id="@+id/layoutItemProductDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_cornerRadius="10dp"
+        app:rv_strokeColor="@color/gray"
+        app:rv_strokeWidth="1dp">
+
+        <LinearLayout
+            android:id="@+id/rowItemStore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/imvProductAvata"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="TODO"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginVertical="@dimen/dp10"
+                        android:src="@drawable/ic_qtc_icon_product_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_marginVertical="@dimen/dp10"
+                        android:src="@drawable/ic_qtc_icon_ngon_tay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:paddingVertical="@dimen/dp5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Moto CBR 250RR 2018 Moto CBR 250RR 2018 Moto CBR 250RR 2018" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </b.laixuantam.myaarlibrary.widgets.roundview.RoundRelativeLayout>
+</androidx.cardview.widget.CardView>
