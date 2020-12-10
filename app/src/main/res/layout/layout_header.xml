@@ -4,17 +4,20 @@
     android:id="@+id/layoutBackgroundHeader"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/colorPrimary">
+    android:elevation="@dimen/dp10"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/btnBackHeader"
+        android:visibility="gone"
+        tools:visibility="visible"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:contentDescription="TODO"
         android:src="@drawable/ic_arrow_left_white"
-        android:tint="@color/white" />
+        android:tint="@color/black" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +34,7 @@
             android:layout_centerInParent="true"
             android:maxLines="1"
             android:text="@string/dummy_text"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Title" />
@@ -42,11 +45,24 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:maxLines="1"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:visibility="gone"
             tools:text="Subtitle"
             tools:visibility="visible" />
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imvAction2"
+        android:padding="@dimen/dp5"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_qtc_icon_contact"
+        android:tint="@color/black" />
 </RelativeLayout>

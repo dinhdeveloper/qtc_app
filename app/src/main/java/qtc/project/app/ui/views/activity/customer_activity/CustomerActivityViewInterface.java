@@ -6,4 +6,8 @@ import qtc.project.app.activity.CustomerActivity;
 public interface CustomerActivityViewInterface extends BaseViewInterface {
 
     void init(CustomerActivity activity,CustomerActivityViewCallback callback);
+
+    void showBottomMenuBar();
+
+    void hideBottomMenuBar();
 }

@@ -25,8 +25,7 @@
                 android:id="@+id/LayoutBaseMainFragmentActivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@+id/bnb_menu_control"
-                android:visibility="gone" />
+                android:layout_above="@+id/bnb_menu_control"/>
 
             <b.laixuantam.myaarlibrary.widgets.bottomnavigationbar.BottomNavigationBar
                 android:id="@+id/bnb_menu_control"
@@ -68,7 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <include layout="@layout/layout_footer_customer" />
+            <include
+                layout="@layout/layout_footer_customer" />
         </RelativeLayout>
 
 

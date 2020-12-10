@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.simform.custombottomnavigation.SSCustomBottomNavigation
+        android:id="@+id/layout_SSCustomBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:ss_backgroundBottomColor="#ffffff"
+        app:ss_circleColor="#6200EE"
+        app:ss_countBackgroundColor="#6200EE"
+        app:ss_countTextColor="#ffffff"
+        app:ss_defaultIconColor="#000000"
+        app:ss_iconTextColor="#000000"
+        app:ss_iconTextSize="12sp"
+        app:ss_rippleColor="#2f424242"
+        app:ss_selectedIconColor="#6200EE"
+        app:ss_selectedIconTextColor="#6200EE"
+        app:ss_shadowColor="#1f212121"
+        app:ss_waveHeight="7" />
 </LinearLayout>
