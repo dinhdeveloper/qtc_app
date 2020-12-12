@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:background="@color/bg_customer"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <include layout="@layout/layout_header_admin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="-180dp"
+            android:layout_marginRight="180dp"
+            android:layout_weight="3"
+            android:background="@drawable/qtc_bg_admin"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <b.laixuantam.myaarlibrary.widgets.roundview.RoundLinearLayout
+                android:id="@+id/btnSubmit"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/dp20"
+                android:gravity="center"
+                app:rv_backgroundColor="@color/color_orange"
+                app:rv_cornerRadius="@dimen/dp5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp10"
+                    android:src="@drawable/ic_qtc_icon_next" />
+            </b.laixuantam.myaarlibrary.widgets.roundview.RoundLinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <b.laixuantam.myaarlibrary.widgets.roundview.RoundTextView
+            android:id="@+id/btnOption3"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/dp10"
+            android:drawableLeft="@drawable/ic_qtc_gioi_thieu_cong_ty"
+            android:drawableRight="@drawable/ic_qtc_tick_off"
+            android:drawablePadding="@dimen/dp10"
+            android:elevation="@dimen/dp10"
+            android:gravity="center"
+            android:padding="@dimen/dp15"
+            android:text="Giới thiệu công ty"
+            android:textColor="#828282"
+            android:textSize="@dimen/dp20"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius_BL="5dp"
+            app:rv_cornerRadius_BR="35dp"
+            app:rv_cornerRadius_TL="5dp"
+            app:rv_cornerRadius_TR="35dp" />
+
+        <b.laixuantam.myaarlibrary.widgets.roundview.RoundTextView
+            android:id="@+id/btnOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/dp10"
+            android:drawableLeft="@drawable/ic_quan_ly_slide_home_active"
+            android:drawableRight="@drawable/ic_qtc_tick_on"
+            android:drawablePadding="@dimen/dp10"
+            android:elevation="@dimen/dp10"
+            android:gravity="center"
+            android:padding="@dimen/dp15"
+            android:text="Quản lý home slide"
+            android:textColor="@color/color_orange"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius_BL="5dp"
+            app:rv_cornerRadius_BR="40dp"
+            app:rv_cornerRadius_TL="5dp"
+            app:rv_cornerRadius_TR="40dp" />
+
+        <b.laixuantam.myaarlibrary.widgets.roundview.RoundTextView
+            android:id="@+id/btnOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/dp10"
+            android:drawableLeft="@drawable/ic_qtc_gioi_thieu_cong_ty"
+            android:drawableRight="@drawable/ic_qtc_tick_off"
+            android:drawablePadding="@dimen/dp10"
+            android:elevation="@dimen/dp10"
+            android:gravity="center"
+            android:padding="@dimen/dp15"
+            android:text="Giới thiệu công ty"
+            android:textColor="#828282"
+            android:textSize="@dimen/dp20"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius_BL="5dp"
+            app:rv_cornerRadius_BR="35dp"
+            app:rv_cornerRadius_TL="5dp"
+            app:rv_cornerRadius_TR="35dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -298,12 +298,6 @@ public class FragmentAdminManagerListBaseView extends BaseView<FragmentAdminMana
 
         quickAction.show(view);
     }
-
-    @Override
-    public void clearListData() {
-
-    }
-
     @Override
     public BaseUiContainer getUiContainer() {
         return new FragmentAdminManagerListBaseView.UIContainer();

@@ -1,7 +1,5 @@
 package qtc.project.app.model.customer;
 
-import java.util.List;
-
 import qtc.project.app.model.BaseResponseModel;
 
 public class ProductDetailModel extends BaseResponseModel {
@@ -39,8 +37,8 @@ public class ProductDetailModel extends BaseResponseModel {
     private String product_short_description;
     private String product_specification;
     private String product_information;
-    private ProductPhotoModel[] product_photo;
-    private ProductTagModel[] product_tag;
+    private PhotoModel[] product_photo;
+    private HashTagModel[] product_tag;
 
     public String getProduct_id() {
         return product_id;
@@ -122,19 +120,19 @@ public class ProductDetailModel extends BaseResponseModel {
         this.product_information = product_information;
     }
 
-    public ProductPhotoModel[] getProduct_photo() {
+    public PhotoModel[] getProduct_photo() {
         return product_photo;
     }
 
-    public void setProduct_photo(ProductPhotoModel[] product_photo) {
+    public void setProduct_photo(PhotoModel[] product_photo) {
         this.product_photo = product_photo;
     }
 
-    public ProductTagModel[] getProduct_tag() {
+    public HashTagModel[] getProduct_tag() {
         return product_tag;
     }
 
-    public void setProduct_tag(ProductTagModel[] product_tag) {
+    public void setProduct_tag(HashTagModel[] product_tag) {
         this.product_tag = product_tag;
     }
 }

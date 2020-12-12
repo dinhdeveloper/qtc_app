@@ -17,7 +17,7 @@ import retrofit2.http.Body;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
-@ApiRequest.ApiName("customer_login")
+@ApiRequest.ApiName("user_login")
 public class LoginRequest extends ApiRequest<LoginRequest.Service, BaseResponseModel<UserResponseModel>, LoginRequest.ApiParams> {
 
     public LoginRequest() {

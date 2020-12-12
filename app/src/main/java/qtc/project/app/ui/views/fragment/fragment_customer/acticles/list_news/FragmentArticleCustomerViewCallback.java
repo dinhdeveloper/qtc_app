@@ -1,4 +1,4 @@
-package qtc.project.app.ui.views.fragment.fragment_customer.acticles;
+package qtc.project.app.ui.views.fragment.fragment_customer.acticles.list_news;
 
 import qtc.project.app.dialog.option.OptionModel;
 

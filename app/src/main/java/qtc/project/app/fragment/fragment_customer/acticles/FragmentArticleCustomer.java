@@ -2,6 +2,9 @@ package qtc.project.app.fragment.fragment_customer.acticles;
 
 import android.text.TextUtils;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import b.laixuantam.myaarlibrary.api.ApiRequest;
 import b.laixuantam.myaarlibrary.api.ErrorApiResponse;
 import b.laixuantam.myaarlibrary.base.BaseFragment;
@@ -13,12 +16,13 @@ import qtc.project.app.api.fragment_customer.anticle.RequestListNews;
 import qtc.project.app.api.fragment_customer.anticle.RequestListNewsCategory;
 import qtc.project.app.dependency.AppProvider;
 import qtc.project.app.dialog.option.OptionModel;
+import qtc.project.app.event.BackShowRootViewEvent;
 import qtc.project.app.model.BaseResponseModel;
 import qtc.project.app.model.customer.NewsCategoryModel;
 import qtc.project.app.model.customer.NewsModel;
-import qtc.project.app.ui.views.fragment.fragment_customer.acticles.FragmentArticleCustomerView;
-import qtc.project.app.ui.views.fragment.fragment_customer.acticles.FragmentArticleCustomerViewCallback;
-import qtc.project.app.ui.views.fragment.fragment_customer.acticles.FragmentArticleCustomerViewInterface;
+import qtc.project.app.ui.views.fragment.fragment_customer.acticles.list_news.FragmentArticleCustomerView;
+import qtc.project.app.ui.views.fragment.fragment_customer.acticles.list_news.FragmentArticleCustomerViewCallback;
+import qtc.project.app.ui.views.fragment.fragment_customer.acticles.list_news.FragmentArticleCustomerViewInterface;
 
 public class FragmentArticleCustomer extends BaseFragment<FragmentArticleCustomerViewInterface, BaseParameters> implements FragmentArticleCustomerViewCallback {
 
@@ -94,7 +98,17 @@ public class FragmentArticleCustomer extends BaseFragment<FragmentArticleCustome
 
     @Override
     public void onItemListSelected(OptionModel item) {
-
+        NewsModel model = (NewsModel) item.getDtaCustom();
+        if (activity != null) {
+            activity.changeToFragmentNewsDetail(model);
+            activity.hideBottomMenuBar();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    view.hideRootView();
+                }
+            }, 700);
+        }
     }
 
     @Override
@@ -170,5 +184,13 @@ public class FragmentArticleCustomer extends BaseFragment<FragmentArticleCustome
     @Override
     protected BaseParameters getParametersContainer() {
         return null;
+    }
+
+    @SuppressWarnings("unused")
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onBackShowRootViewEvent(BackShowRootViewEvent event) {
+        if (view != null) {
+            view.showRootView();
+        }
     }
 }

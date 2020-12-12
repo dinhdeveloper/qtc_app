@@ -78,6 +78,9 @@
     <color name="blue_light">#73c3fe</color>
     <color name="text_blue">#8E8E93</color>
     <color name="bg_customer">#EFF4F7</color>
+    <color name="bg_">#F2F2F2</color>
+    <color name="color_orange">#FF5722</color>
+    <color name="color_btn">#FF5E59</color>
 
     <color name="titleTabColor">#ffffff</color>
     <color name="titleSelectedTabColor">#3F51B5</color>

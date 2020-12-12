@@ -4,11 +4,13 @@ import qtc.project.app.model.BaseResponseModel;
 
 public class NewsModel extends BaseResponseModel {
 
+
     /**
-     * id : 1
-     * id_category : 3
-     * upload_date : 2020-10-16 14:35:29
-     * thumb_800_300 : uploads/news/thumb/th.jpg
+     * id : 2
+     * id_category : 1
+     * news_title : Tuyển dụng vị trí iOS Developer
+     * upload_date : 2020-10-16 14:37:04
+     * thumb_800_300 : uploads/news/thumb/tuyendung.jpg
      */
 
     private String id;
@@ -33,6 +35,14 @@ public class NewsModel extends BaseResponseModel {
         this.id_category = id_category;
     }
 
+    public String getNews_title() {
+        return news_title;
+    }
+
+    public void setNews_title(String news_title) {
+        this.news_title = news_title;
+    }
+
     public String getUpload_date() {
         return upload_date;
     }
@@ -47,13 +57,5 @@ public class NewsModel extends BaseResponseModel {
 
     public void setThumb_800_300(String thumb_800_300) {
         this.thumb_800_300 = thumb_800_300;
-    }
-
-    public String getNews_title() {
-        return news_title;
-    }
-
-    public void setNews_title(String news_title) {
-        this.news_title = news_title;
     }
 }

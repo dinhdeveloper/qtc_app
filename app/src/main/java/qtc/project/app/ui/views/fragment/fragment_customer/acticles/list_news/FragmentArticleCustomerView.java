@@ -1,4 +1,4 @@
-package qtc.project.app.ui.views.fragment.fragment_customer.acticles;
+package qtc.project.app.ui.views.fragment.fragment_customer.acticles.list_news;
 
 import android.view.View;
 import android.widget.TextView;
@@ -116,13 +116,12 @@ public class FragmentArticleCustomerView extends BaseView<FragmentArticleCustome
     @Override
     public void setDataNews(NewsCategoryModel[] data) {
         if (data != null && data.length > 0) {
-            if (callback != null)
-                callback.onRequestNewDetail(data[0].getId());
             ui.recycler_view_list_category.getRecycledViewPool().clear();
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
             ui.recycler_view_list_category.setLayoutManager(linearLayoutManager);
             //todo setup list with adapter
             List<NewsCategoryModel> list = new ArrayList<>();
+            list.clear();
             list.addAll(Arrays.asList(data));
             ListNewsCategoryAdapter newsAdapter = new ListNewsCategoryAdapter(getContext(), list);
             ui.recycler_view_list_category.setAdapter(newsAdapter);

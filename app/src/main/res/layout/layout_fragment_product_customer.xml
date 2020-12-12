@@ -9,6 +9,7 @@
     <include layout="@layout/layout_header"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/bg_"
         android:id="@+id/recycler_view_list_category"
         android:layout_marginVertical="@dimen/dp10"
         android:layout_width="match_parent"
@@ -18,6 +19,7 @@
         tools:orientation="horizontal"/>
 
     <RelativeLayout
+        android:background="@color/bg_"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp">

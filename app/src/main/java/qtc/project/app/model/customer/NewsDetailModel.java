@@ -25,7 +25,8 @@ public class NewsDetailModel extends BaseResponseModel {
     private String upload_date;
     private String thumb_800_300;
     private String news_content;
-    private ImgPhotoNewsModel[] img_photo;
+    private PhotoModel[] img_photo;
+    private HashTagModel[] tag_title;
 
     public String getId() {
         return id;
@@ -67,11 +68,19 @@ public class NewsDetailModel extends BaseResponseModel {
         this.news_content = news_content;
     }
 
-    public ImgPhotoNewsModel[] getImg_photo() {
+    public PhotoModel[] getImg_photo() {
         return img_photo;
     }
 
-    public void setImg_photo(ImgPhotoNewsModel[] img_photo) {
+    public void setImg_photo(PhotoModel[] img_photo) {
         this.img_photo = img_photo;
+    }
+
+    public HashTagModel[] getTag_title() {
+        return tag_title;
+    }
+
+    public void setTag_title(HashTagModel[] tag_title) {
+        this.tag_title = tag_title;
     }
 }

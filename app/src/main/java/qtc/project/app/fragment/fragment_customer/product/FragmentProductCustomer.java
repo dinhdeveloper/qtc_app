@@ -2,6 +2,9 @@ package qtc.project.app.fragment.fragment_customer.product;
 
 import android.text.TextUtils;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import b.laixuantam.myaarlibrary.api.ApiRequest;
 import b.laixuantam.myaarlibrary.api.ErrorApiResponse;
 import b.laixuantam.myaarlibrary.base.BaseFragment;
@@ -13,6 +16,7 @@ import qtc.project.app.api.fragment_customer.dashboard.RequestListProductHome;
 import qtc.project.app.api.fragment_customer.product.RequestCategoryProduct;
 import qtc.project.app.dependency.AppProvider;
 import qtc.project.app.dialog.option.OptionModel;
+import qtc.project.app.event.BackShowRootViewEvent;
 import qtc.project.app.model.BaseResponseModel;
 import qtc.project.app.model.customer.CategoryProductModel;
 import qtc.project.app.model.customer.ProductHomeModel;
@@ -142,7 +146,17 @@ public class FragmentProductCustomer extends BaseFragment<FragmentProductCustome
 
     @Override
     public void onItemListSelected(OptionModel item) {
-
+        ProductHomeModel model = (ProductHomeModel) item.getDtaCustom();
+        if (activity != null) {
+            activity.changeToFragmentProductDetail(model);
+            activity.hideBottomMenuBar();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    view.hideRootView();
+                }
+            }, 700);
+        }
     }
 
     @Override
@@ -168,5 +182,13 @@ public class FragmentProductCustomer extends BaseFragment<FragmentProductCustome
     @Override
     protected BaseParameters getParametersContainer() {
         return null;
+    }
+
+    @SuppressWarnings("unused")
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onBackShowRootViewEvent(BackShowRootViewEvent event) {
+        if (view != null) {
+            view.showRootView();
+        }
     }
 }

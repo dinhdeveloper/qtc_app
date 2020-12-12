@@ -1,11 +1,9 @@
-package qtc.project.app.ui.views.fragment.fragment_customer.acticles;
+package qtc.project.app.ui.views.fragment.fragment_customer.acticles.list_news;
 
 import b.laixuantam.myaarlibrary.base.BaseViewInterface;
 import qtc.project.app.activity.CustomerActivity;
 import qtc.project.app.model.BaseResponseModel;
-import qtc.project.app.model.customer.CategoryProductModel;
 import qtc.project.app.model.customer.NewsCategoryModel;
-import qtc.project.app.model.customer.NewsModel;
 
 public interface FragmentArticleCustomerViewInterface extends BaseViewInterface {
 

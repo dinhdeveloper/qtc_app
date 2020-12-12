@@ -116,8 +116,6 @@ public class FragmentProductCustomerView extends BaseView<FragmentProductCustome
     @Override
     public void setDataCategoryProduct(CategoryProductModel[] data) {
         if (data != null && data.length > 0) {
-            if (callback != null)
-                callback.getListDataProductByIdCategory(data[0].getId());
             ui.recycler_view_list_category.getRecycledViewPool().clear();
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
             ui.recycler_view_list_category.setLayoutManager(linearLayoutManager);
@@ -132,7 +130,7 @@ public class FragmentProductCustomerView extends BaseView<FragmentProductCustome
                     callback.getListDataProductByIdCategory(model.getId());
                 }
             });
-        }else {
+        } else {
             showEmptyList();
         }
     }

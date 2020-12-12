@@ -6,6 +6,13 @@
     android:background="@drawable/qtc_bg_login"
     android:orientation="vertical">
     <ImageView
+        android:id="@+id/btnBackHeader"
+        android:padding="@dimen/dp5"
+        android:layout_margin="@dimen/dp10"
+        android:src="@drawable/ic_qtc_back_while"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+    <ImageView
         android:padding="@dimen/dp20"
         android:layout_marginVertical="30dp"
         android:layout_gravity="center"

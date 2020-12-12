@@ -186,7 +186,7 @@ public class FragmentDashboardCustomer extends BaseFragment<FragmentDashboardCus
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onBackShowRootViewEvent(BackShowRootViewEvent event) {
         if (view != null) {
-            view.hashCode();
+            view.showRootView();
         }
     }
 }

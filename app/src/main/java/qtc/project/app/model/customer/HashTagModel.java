@@ -2,7 +2,7 @@ package qtc.project.app.model.customer;
 
 import qtc.project.app.model.BaseResponseModel;
 
-public class ProductTagModel extends BaseResponseModel {
+public class HashTagModel extends BaseResponseModel {
     /**
      * id : 1
      * id_product : 55
@@ -12,6 +12,12 @@ public class ProductTagModel extends BaseResponseModel {
     private String id;
     private String id_product;
     private String tag_title;
+    /**
+     * id_news : 1
+     */
+
+    private String id_news;
+
 
     public String getId() {
         return id;
@@ -35,5 +41,13 @@ public class ProductTagModel extends BaseResponseModel {
 
     public void setTag_title(String tag_title) {
         this.tag_title = tag_title;
+    }
+
+    public String getId_news() {
+        return id_news;
+    }
+
+    public void setId_news(String id_news) {
+        this.id_news = id_news;
     }
 }

@@ -43,6 +43,18 @@ public class UserResponseModel extends BaseResponseModel {
 
     @Nullable
     private String full_name;
+    /**
+     * id_login : 2
+     * login_username : anhphi123
+     * login_fullname : phi
+     * login_level : 2
+     */
+
+    private String id_login;
+    private String login_username;
+    private String login_fullname;
+    private String login_level;
+
 
     public String getId() {
         return id_customer;
@@ -189,6 +201,38 @@ public class UserResponseModel extends BaseResponseModel {
         }
 
         return null;
+    }
+
+    public String getId_login() {
+        return id_login;
+    }
+
+    public void setId_login(String id_login) {
+        this.id_login = id_login;
+    }
+
+    public String getLogin_username() {
+        return login_username;
+    }
+
+    public void setLogin_username(String login_username) {
+        this.login_username = login_username;
+    }
+
+    public String getLogin_fullname() {
+        return login_fullname;
+    }
+
+    public void setLogin_fullname(String login_fullname) {
+        this.login_fullname = login_fullname;
+    }
+
+    public String getLogin_level() {
+        return login_level;
+    }
+
+    public void setLogin_level(String login_level) {
+        this.login_level = login_level;
     }
 
 
